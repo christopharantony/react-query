@@ -19,7 +19,7 @@ export default function EventDetails() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["events", { id }],
+    queryKey: ["events", id],
     queryFn: (args) => fetchEvent({ id, ...args }),
   });
 
