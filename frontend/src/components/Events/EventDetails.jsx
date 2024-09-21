@@ -82,7 +82,11 @@ export default function EventDetails() {
           View all Events
         </Link>
       </Header>
-      {isLoading && <LoadingIndicator />}
+      {isLoading && (
+        <div className="center">
+          <LoadingIndicator />
+        </div>
+      )}
       {isError && (
         <ErrorBlock
           title="An error occurred"
